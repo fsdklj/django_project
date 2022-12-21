@@ -1,13 +1,19 @@
-{% extends 'blog/base.html' %}
+{% extends 'base.html' %}
 
-{% block content %}
+{% block title%}Blog post list{% endblock %}
+
+{% block nav-below-content %}
+{% include 'blog/base.html' %}
+    {% endblock %}
+    {% block content %}
+    <blog_default class="blog_default">
     {% for post in posts %}
-        <div class="post">
-            <div class="date">
+        <div class="blog_post">
+            <div class="blog_date">
                 <p>published: {{ post.published_date }}</p>
             </div>
-            <h1><a href="{% url 'blog:post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <h1 class="blog_h1"><a href="{% url 'blog:post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <p>{{ post.text|linebreaksbr }}</p>
-        </div>
+        </div></blog_default>
     {% endfor %}
 {% endblock %}

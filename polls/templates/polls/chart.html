@@ -1,17 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-</head>
-<body>
-    <div id ="container" style="margin-top:20px;"></div>
+{% extends 'base.html' %}
 
-    {% load static %}
-    <script type="text/javascript">var chart_data = {{chart_data|safe}}</script>
-    <script type="text/javascript">var chart_title = {{chart_title|safe}}</script>
+{% block title %}polls chart{% endblock %}
 
-    <script defer src="{% static 'polls/javascript.js' %}"></script>
-</body>
-</html>
+
+
+{% block content %}
+        <polls_dafult class="polls_default">
+        <div id ="container" style="margin-top:20px;"></div>
+        <input type="button" value="list" onclick="location.href='/polls'" class="polls_iback">
+        </polls_dafult>
+
+        {% load static %}
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script type="text/javascript">var chart_data = {{chart_data|safe}}</script>
+        <script type="text/javascript">var chart_title = {{chart_title|safe}}</script>
+
+        <script defer src="{% static 'polls/javascript.js' %}"></script>
+
+
+{% endblock %}
+

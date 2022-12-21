@@ -2,10 +2,17 @@
 
 {% block title %}Bookmark Update{% endblock %}
 
+{% block nav-below-content %}
+{% include 'bookmark/bookmark_head.html' %}
+    {% endblock %}
 {% block content %}
+<bookmark_default class="bookmark_default">
+<P></P>
   <form action="" method="post">
     {%csrf_token %}
     {{form.as_p}}
-    <input type="submit" value="Update" class="btn btn-info btn-sm">
+    <p></p>
+    <input type="submit" value="Update" class="bookmark_btn bookmark_btn-update btn-info btn-sm">
   </form>
+</bookmark_default>
 {% endblock %}

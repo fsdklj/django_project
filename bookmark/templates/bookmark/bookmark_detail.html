@@ -2,8 +2,16 @@
 
 {% block title %}Detail{% endblock %}
 
-
+{% block nav-below-content %}
+{% include 'bookmark/bookmark_head.html' %}
+    {% endblock %}
 {% block content %}
+<bookmark_default class="bookmark_default">
+<P></P>
   {{object.site_name}}<br/>
   {{object.url}}
+<p></p><p></p>
+  <a href="{% url 'bookmark:update' pk=bookmark.id %}" class="btn btn-success btn-sm">Modify</a>
+  <a href="{% url 'bookmark:delete' pk=bookmark.id %}" class="btn btn-danger btn-sm">Delete</a>
+</bookmark_default>
 {% endblock %}

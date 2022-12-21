@@ -2,10 +2,16 @@
 
 {% block title %}Confirm Delete{% endblock %}
 
+{% block nav-below-content %}
+{% include 'bookmark/bookmark_head.html' %}
+    {% endblock %}
 {% block content %}
+<bookmark_default class="bookmark_default">
+<P></P>
   <form action="" method="post">
     {% csrf_token %}
-    <div class="alert alert-danger">Do you want to delete Bookmark "{{object}"?</div>
+    <div class="alert alert-danger">Do you want to delete Bookmark?</div>
     <input type="submit" value="Delete" class="btn btn-danger">
   </form>
+  </bookmark_default>
 {% endblock %}

@@ -1,0 +1,10 @@
+<div class="bookmark_page-header">
+</div>
+<div class="bookmark_page-header">
+    {% if user.is_authenticated %}
+        <div  class="bookmark_top-menu">
+        <a href="{% url 'bookmark:add' %}"><div class="bookmark_btn">📌 Add Bookmark</div></a>
+        </div>
+    {% endif %}
+    <h1 class="blog_h1"><a href="{% url 'bookmark:list' %}">Bookmark</a></h1>
+</div>

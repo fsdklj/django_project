@@ -1,0 +1,75 @@
+
+.polls_page-header {
+    background-color: grey;
+    margin-top: 0px;
+    padding: 40px 20px 20px 40px;
+}
+.polls_page-header-2 {
+    background-color: grey;
+    margin-top: 0px;
+    padding: 40px 20px 20px 40px;
+    height: 125.6px;
+}
+
+.polls_page-header-2 h1, .polls_page-header-2 h1 a, .polls_page-header-2 h1 a:visited, .polls_page-header-2 h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+    font-family: 'Song Myung', serif;
+    }
+
+.polls_default {
+    /*background: white url("images/background.png") no-repeat;*/
+    background-position: center;
+    text-align: left;
+    color : red;
+    text-padding: 10px;
+    font-family: 'Song Myung', serif;
+
+
+}
+
+.polls_h1 {
+    color: #000330;
+}
+.polls_a {
+    color: #353535;
+    font-weight: bold;
+}
+
+.polls_li, .polls_li:visited, .polls_li:hover, .polls_li:active {
+     list-style-type : none;
+     font-weight: bold;
+     color: #353535;
+}
+
+.polls_label {
+    color: #000330;
+    font-weight: bold;
+}
+
+.polls_input {
+    color: #000330;
+    background: white;
+    border: 0;
+    font-weight: bold;
+}
+
+.polls_ivoteagain {
+    color: #ff1010;
+    background: white;
+    border: 0;
+    font-weight: bold;
+}
+
+.polls_uresult {
+    color: #000330;
+}
+.polls_iback {
+    color: #301010;
+    background: white;
+    border: 0;
+    font-weight: bold;
+
+}
+

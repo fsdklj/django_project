@@ -1,33 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-        {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
-</head>
-<body>
-<h1>{{question.question_text}}</h1>
-{% if error_message %} <p> <strong>{{error_message}}</strong></p>{% endif %}
+{% extends 'base.html' %}
 
-<form action="{% url 'polls:vote' question.id %}" method="post">
-{% csrf_token %}
-{% for choice in question.choice_set.all %}
-    <input type = "checkbox" name="choice" id="choice{{forloop.counter}}" value="{{choice.id}}">
-    <label for ="choice{{forloop.counter}}">{{choice.choice_text}}</label><br>
-{% endfor %}
-   <br>
-<input type="submit" value="Vote">&nbsp;
-    <a href="/polls" id="aback1">Back</a>
+{% block title %}polls detail{% endblock %}
 
-</form>
-<!--<h1>{{question.question_text}}</h1>-->
-<!--<ul>-->
-<!--  {% for choice in question.choice_set.all %}-->
-<!--  <li>{{ choice.choice_text }}</li>-->
-<!--  {% endfor %}-->
-<!--</ul>-->
-<!--{{question}}-->
 
-</body>
-</html>
+{% block nav-below-content %}
+{% include 'polls/polls_head.html' %}
+    {% endblock %}
+{% block content %}
+<p></p>
+    <polls_default class="polls_default">
+        <p></p>
+    <h1 class="polls_h1">{{question.question_text}}</h1>
+    {% if error_message %} <p> <strong>{{error_message}}</strong></p>{% endif %}
+
+    <form action="{% url 'polls:vote' question.id %}" method="post">
+    {% csrf_token %}
+    {% for choice in question.choice_set.all %}
+        <input type = "checkbox" name="choice" id="choice{{forloop.counter}}" value="{{choice.id}}" class="polls_input">
+        <label for ="choice{{forloop.counter}}" class="polls_label">{{choice.choice_text}}</label><br>
+    {% endfor %}
+       <br>
+    <input type="submit" value="Vote" class="polls_input">&nbsp;
+    <input type="button" value="Back" onclick="location.href='/polls'" class="polls_iback">
+    </form>
+    </polls_default>
+{% endblock %}

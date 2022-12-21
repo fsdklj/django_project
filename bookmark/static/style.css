@@ -1,71 +1,42 @@
-.blog_default {
+.bookmark_default {
     padding-left: 15px;
 }
 
-.blog_h1 a {
+.bookmark_h1 a {
     color: #FCA205;
     font-family: 'Song Myung', serif;
 }
 
 
-.blog_page-header {
-    background-color: #8a2be2;
+.bookmark_page-header {
+    background-color: green;
     margin-top: 0px;
     padding: 40px 20px 20px 40px;
-
 }
 
-.blog_page-header h1, .blog_page-header h1 a, .blog_page-header h1 a:visited, .blog_page-header h1 a:active {
+.bookmark_page-header h1, .bookmark_page-header h1 a, .bookmark_page-header h1 a:visited, .bookmark_page-header h1 a:active {
     color: #ffffff;
     font-size: 36pt;
     text-decoration: none;
 }
 
-.blog_content {
+.bookmark_content {
+
     margin-left: 40px;
 }
 
-.blog_h1, .blog_h2, .blog_h3, .blog_h4 {
+.bookmark_h1, .bookmark_h2, .bookmark_h3, .bookmark_h4 {
     font-family: 'Song Myung', serif;
 }
 
-.blog_date {
-    color: #828282;
-
-}
-
-.blog_save {
-    float: right;
-}
-
-.blog_post-form textarea, .blog_post-form input {
-    width: 100%;
-}
-
-.blog_top-menu, .blog_top-menu:hover, .blog_top-menu:visited {
+.bookmark_top-menu, .bookmark_top-menu:hover, .bookmark_top-menu:visited {
     color: #ffffff;
     float: right;
     font-size: 26pt;
     margin-right: 20px;
 }
 
-.blog_post {
-    margin-bottom: 70px;
-}
-
-.blog_post h1 a, .blog_post h1 a:visited {
-    color: #000000;
-}
-
-.blog_edit-icon {
-    float: right;
-}
-
-.blog_btn-add-post {
-    width: 185px;
-}
-
-.blog_btn {
+.bookmark_btn {
   background-color: white;
   border: none;
   color: black;
@@ -79,11 +50,18 @@
   text-decoration: none;
   border-radius:28px;
   display:inline-block;
+
 }
 
-.blog_btn:hover,.blog_btn:active {
-  background-color: #8a3fe2;
+.bookmark_btn:hover,.bookmark_btn:active {
+  background-color: #3e8e41;
   color: white;
   font-family: 'Song Myung', serif;
   text-decoration: none;
+}
+
+.bookmark_btn-update {
+    background-color: #3e8e41;
+    color: white;
+     padding: 8px 16px;
 }

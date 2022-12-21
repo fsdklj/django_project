@@ -1,20 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-        {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
-</head>
-<body>
-<h1>{{question.question_text}}</h1>
-<ul id="uresult">
-  {% for choice in question.choice_set.all %}
-  <li>{{choice.choice_text}} -- {{choice.votes}} vote{{choice.votes|pluralize}}</li>
-  {% endfor %}
-</ul>
-<a href="{% url 'polls:detail' question.id %}" id="avoteagain">Vote again?</a>
-    &nbsp;<a href="/polls" id="aback2">Back</a>
-<a href="{% url 'polls:chart' question.id %}">Chart</a>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}polls result{% endblock %}
+
+
+
+{% block nav-below-content %}
+{% include 'polls/polls_head.html' %}
+    {% endblock %}
+{% block content %}
+<p></p>
+    <polls_default class="polls_default">
+    <h1 class="polls_h1">{{question.question_text}}</h1>
+    <ul class="polls_uresult">
+      {% for choice in question.choice_set.all %}
+      <li class="polls_li">{{choice.choice_text}} -- {{choice.votes}} vote{{choice.votes|pluralize}}</li>
+      {% endfor %}
+    </ul>
+        <input type="button" value="Vote again?" onclick="location.href='{% url 'polls:detail' question.id %}'" class="polls_ivoteagain">
+        <input type="button" value="Back" onclick="location.href='/polls'" class="polls_iback">
+        <input type="button" value="Chart" onclick="location.href='{% url 'polls:chart' question.id %}'" class="polls_input">
+    </polls_default>
+{% endblock %}

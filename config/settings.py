@@ -25,7 +25,7 @@ SECRET_KEY = 'phtt8l#f^o@-lsf#)^+*)!b11u9ayms2_fu*^zp7_-ok=qztg$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['fsdoh.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -109,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/seoul'
 
 USE_I18N = True
 

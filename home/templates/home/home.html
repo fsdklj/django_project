@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
 
 {% block title %}home.html{% endblock %}
-{% block content %}
-    {% load static %}
-    <link rel="stylesheet" type = "text/css" href="{% static 'home/style.css' %}">
-<h4>Django project</h4>
-{% endblock %}
+
+{% block nav-below-content %}
+<div class="home_page">
+<h1 class="home_h1">
+    <br>Django project
+    <p></p>
+    <br>통합앱
+    <p></p>
+
+</h1>
+</div>
+    {% endblock %}
